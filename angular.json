@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           },
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "website"
+    }
+  },
+  "defaultProject": "website",
+  "cli": {
+    "analytics": "8c039558-f6f1-4186-9ba1-b3e07a171ffd"
+  }
 }
