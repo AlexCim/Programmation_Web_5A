@@ -5,23 +5,10 @@
   <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
 </div>
 
-<div id="wrapper">
-
-  <app-header></app-header>
-
   <!--Main Content Area-->
   <main id="content">
-
-    <app-introduction></app-introduction>
-    <app-gallery></app-gallery>
-    <app-content></app-content>
-    <app-testimonial></app-testimonial>
-    <!--app-clients></app-clients-->
-    <app-pricing></app-pricing>
-
+      <app-navigation></app-navigation>
+      <router-outlet></router-outlet>
   </main>
   <!--End Main Content Area-->
-
   <app-footer></app-footer>
-  
-</div>

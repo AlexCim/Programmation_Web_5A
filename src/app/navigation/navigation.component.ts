@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
+  activeTab: string;
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getActiveTab(tabName: string){
+    this.activeTab = tabName;
+    console.log(tabName);
   }
 
 }
