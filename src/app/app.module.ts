@@ -21,6 +21,7 @@ import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ReactiveFormsModule } from '@angular/forms';
 import { fakeBackendProvider } from './_helpers/fake-backend';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { fakeBackendProvider } from './_helpers/fake-backend';
     NavigationComponent,
     HomeComponent,
     AlertComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

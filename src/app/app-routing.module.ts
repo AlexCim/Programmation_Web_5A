@@ -6,19 +6,22 @@ import { HomeComponent } from './home/home.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { LoginComponent } from './login/login.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { RegisterComponent } from './register/register.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { AuthGuard } from './_helpers/auth.guard';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
-  {path: 'about', component: IntroductionComponent },
-  {path: 'login', component: LoginComponent },
-  //{path: 'register', component: RegisterComponent },
-  {path: 'gallery', component: GalleryComponent },
-  {path: 'services', component: ContentComponent },
-  {path: 'testimonials', component: TestimonialComponent },
-  {path: 'pricing', component: PricingComponent},
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'about', component: IntroductionComponent, canActivate: [AuthGuard] },
+  { path: 'gallery', component: GalleryComponent, canActivate: [AuthGuard] },
+  { path: 'services', component: ContentComponent, canActivate: [AuthGuard] },
+  { path: 'testimonials', component: TestimonialComponent, canActivate: [AuthGuard] },
+  { path: 'pricing', component: PricingComponent, canActivate: [AuthGuard]},
+
+  // otherwise redirect to home
+  { path: '**', redirectTo: '' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
