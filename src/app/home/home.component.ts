@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
-@Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
-})
-export class HomeComponent implements OnInit {
+import { AccountService } from '@app/_services';
 
-  constructor() { }
+@Component({ templateUrl: 'home.component.html', styleUrls: ['./home.component.css'] },)
+export class HomeComponent {
+    account = this.accountService.accountValue;
+    activeTab: string;
 
-  ngOnInit(): void {
-  }
+    constructor(private router: Router, private accountService: AccountService) { }
 
+    getActiveTab(tabName: string){
+        this.activeTab = tabName;
+        console.log(tabName);
+      }
+    
+      logout() {
+        this.accountService.logout();
+        this.router.navigate(['/login']);
+      }
 }

@@ -1,7 +1,28 @@
-<app-header></app-header>
+<!-- <app-header></app-header>
 <app-introduction></app-introduction>
 <app-gallery></app-gallery>
 <app-content></app-content>
 <app-testimonial></app-testimonial>
-<app-pricing></app-pricing>
-
+<app-pricing></app-pricing> -->
+<nav class="admin-nav navbar navbar-expand navbar-light">
+    <div class="navbar-nav">
+        <a routerLink="home" routerLinkActive="active" class="nav-item nav-link">Home</a>
+        <a routerLink="about" routerLinkActive="active" class="nav-item nav-link">A propos</a>
+        <a routerLink="gallery" routerLinkActive="active" class="nav-item nav-link">Galerie</a>
+        <a routerLink="services" routerLinkActive="active" class="nav-item nav-link">Services</a>
+        <a routerLink="testimonials" routerLinkActive="active" class="nav-item nav-link">Testimonials</a>
+        <a routerLink="pricing" routerLinkActive="active" class="nav-item nav-link">Pricing</a>
+        <a routerLink="account/login" routerLinkActive="active" class="nav-item nav-link">Login</a>
+    </div>
+</nav>
+<div class="p-4">
+    <div class="container">
+        <h1>Bienvenue!</h1>
+        <app-introduction></app-introduction>
+        <app-gallery></app-gallery>
+        <app-content></app-content>
+        <app-testimonial></app-testimonial>
+        <app-pricing></app-pricing>
+        <!-- <p>You're logged in!</p> -->
+    </div>
+</div>

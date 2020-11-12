@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../_models/user';
 import { AuthenticationService } from '../_services/authentication.service';
+import { Role } from '../_models/role'
+
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -30,6 +32,9 @@ export class NavigationComponent implements OnInit {
   logout() {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
-}
+  }
 
+  get isAdmin() {
+    return this.currentUser && this.currentUser.role === Role.Admin;
+  } 
 }
