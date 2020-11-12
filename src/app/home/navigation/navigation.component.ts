@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../_models/user';
-import { AuthenticationService } from '../_services/authentication.service';
-import { Role } from '../_models/role'
+import { User } from '../../_models/user';
+import { AuthenticationService } from '../../_services/authentication.service';
+import { Role } from '../../_models/role'
 
 @Component({
   selector: 'app-navigation',
@@ -13,7 +13,7 @@ export class NavigationComponent implements OnInit {
 
   currentUser: User;
   activeTab: string;
-  
+
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService
@@ -36,5 +36,5 @@ export class NavigationComponent implements OnInit {
 
   get isAdmin() {
     return this.currentUser && this.currentUser.role === Role.Admin;
-  } 
+  }
 }

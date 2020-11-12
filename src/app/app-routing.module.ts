@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
-import { ContentComponent } from './content/content.component';
-import { GalleryComponent } from './gallery/gallery.component';
+import { ContentComponent } from './home/content/content.component';
+import { GalleryComponent } from './home/gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
-import { IntroductionComponent } from './introduction/introduction.component';
+import { IntroductionComponent } from './home/introduction/introduction.component';
 import { LoginComponent } from './account/login.component';
-import { PricingComponent } from './pricing/pricing.component';
+import { PricingComponent } from './home/pricing/pricing.component';
 import { RegisterComponent } from './account/register.component';
-import { TestimonialComponent } from './testimonial/testimonial.component';
+import { TestimonialComponent } from './home/testimonial/testimonial.component';
 import { AuthGuard } from './_helpers/auth.guard';
 import { Role } from './_models/role';
 

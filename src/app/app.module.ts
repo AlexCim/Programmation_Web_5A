@@ -3,16 +3,15 @@ import { APP_INITIALIZER, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IntroductionComponent } from './introduction/introduction.component';
-import { GalleryComponent } from './gallery/gallery.component';
-import { ContentComponent } from './content/content.component';
-import { TestimonialComponent } from './testimonial/testimonial.component';
-import { ClientsComponent } from './clients/clients.component';
-import { PricingComponent } from './pricing/pricing.component';
+import { IntroductionComponent } from './home/introduction/introduction.component';
+import { GalleryComponent } from './home/gallery/gallery.component';
+import { ContentComponent } from './home/content/content.component';
+import { TestimonialComponent } from './home/testimonial/testimonial.component';
+import { PricingComponent } from './home/pricing/pricing.component';
 import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-import { SocialComponent } from './social/social.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { HeaderComponent } from './home/header/header.component';
+import { SocialComponent } from './home/social/social.component';
+import { NavigationComponent } from './home/navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { AlertComponent } from './_components/alert.component';
 import { LoginComponent } from './account/login.component';
@@ -33,7 +32,6 @@ import { appInitializer } from './_helpers';
     GalleryComponent,
     ContentComponent,
     TestimonialComponent,
-    ClientsComponent,
     PricingComponent,
     FooterComponent,
     HeaderComponent,
@@ -55,7 +53,7 @@ import { appInitializer } from './_helpers';
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
     // provider used to create fake backend
-    //fakeBackendProvider
+    fakeBackendProvider
 ],
   bootstrap: [AppComponent]
 })

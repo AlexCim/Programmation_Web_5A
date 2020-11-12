@@ -4,6 +4,8 @@ export class User {
     password: string;
     firstName: string;
     email: string;
+    numero: number;
+    licence: number;
     lastName: string;
     token?: string;
     role: any;
