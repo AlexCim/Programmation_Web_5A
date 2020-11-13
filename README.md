@@ -1,27 +1,30 @@
-# Website
+# Gestion Centre Equestre
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+## Membres du groupe
 
-## Development server
+* Alexandre CIMONARD
+* Benjamin XIA
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## User Story (réalisées)
 
-## Code scaffolding
+- Epic Utilisateur (cavalier)
+  - User Story inscription
+  - User Story connexion
+    - la connexion ne marche que avec l'adresse e-mail
+  - User Story récupération de mots de passe
+- Epic Administrateur
+  - User Story connexion
+  - User Story recherche d'utilisteur
+- Epic création de compte technique
+  - User Story création de compte administrateur
+  - User Story création de compte moniteur
+- User Story gestion des chevaux
+- User Story gestion des informations personnel
+- Epic moniteur
+  - User Story connexion
+    - la connexion ne marche que avec l'adresse e-mail
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Remarques
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Le site utilise un faux back-end pour simuler l'utilisation d'une API.
+- Il n'y a pas d'utilisateurs ou d'administrateur au début. Le premier compte enregistrer sera un administrateur.
