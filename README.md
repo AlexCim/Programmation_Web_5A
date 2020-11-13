@@ -19,6 +19,7 @@
   - User Story création de compte administrateur
   - User Story création de compte moniteur
 - User Story gestion des chevaux
+  - Non complétée
 - User Story gestion des informations personnel
 - Epic moniteur
   - User Story connexion
