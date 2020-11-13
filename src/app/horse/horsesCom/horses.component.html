@@ -1,0 +1,8 @@
+<a routerLink="addHorse" class="btn btn-sm btn-success mb-2">Create Horse</a>
+<ul class="horses">
+  <li *ngFor="let horse of horses" >
+    <a routerLink="/horse/{{horse.id}}">
+        <span class="badge">{{horse.id}}</span> {{horse.name}}
+    </a>
+  </li>
+</ul>

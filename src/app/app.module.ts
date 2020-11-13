@@ -18,12 +18,15 @@ import { LoginComponent } from './account/login.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { fakeBackendProvider } from './_helpers/fake-backend';
 import { RegisterComponent } from './account/register.component';
 import { AdminComponent } from './admin/admin.component';
 import { AccountService } from './_services';
 import { appInitializer } from './_helpers';
+import { HorsesComponent } from './horse/horsesCom/horses.component';
+import { HorseDetailComponent } from './horse/horse-detail/horse-detail.component';
+import { AddHorseComponent } from './add-horse/add-horse.component';
 
 @NgModule({
   declarations: [
@@ -40,12 +43,16 @@ import { appInitializer } from './_helpers';
     HomeComponent,
     AlertComponent,
     AdminComponent,
+    HorsesComponent,
+    HorseDetailComponent,
+    AddHorseComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },

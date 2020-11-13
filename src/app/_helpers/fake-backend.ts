@@ -5,10 +5,20 @@ import { delay, materialize, dematerialize } from 'rxjs/operators';
 
 import { AlertService } from '../_services';
 import { Role } from '../_models/role';
+import { Horse } from '../_models/horse';
 
 // array in local storage for accounts
 const accountsKey = 'angular-10-signup-verification-boilerplate-accounts';
 let accounts = JSON.parse(localStorage.getItem(accountsKey)) || [];
+
+const horsesKey = 'justakey';
+let horses = JSON.parse(localStorage.getItem(horsesKey)) || [];
+
+export const HORSES: Horse[] = [
+    { id: 1, name: 'Windstorm', age: 6, race: 'Islandais' },
+    { id: 2, name: 'Pikachu', age: 4, race: 'Islandais' },
+    { id: 3, name: 'Petit Tonnerre', age: 5, race: 'Islandais' }
+];
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
@@ -17,6 +27,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         const { url, method, headers, body } = request;
         const alertService = this.alertService;
+
 
         return handleRoute();
 
@@ -48,6 +59,17 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                     return updateAccount();
                 case url.match(/\/accounts\/\d+$/) && method === 'DELETE':
                     return deleteAccount();
+
+                // case url.endsWith('/horses') && method === 'GET':
+                //     return getHorses();
+                // case url.match(/\/horses\/\d+$/) && method === 'GET':
+                //     return getHorseById();
+                // case url.endsWith('/horses') && method === 'POST':
+                //     return createHorse();
+                // case url.match(/\/horses\/\d+$/) && method === 'PUT':
+                //     return updateHorse();
+                // case url.match(/\/horses\/\d+$/) && method === 'DELETE':
+                //     return deleteHorse();
                 default:
                     // pass through any requests not handled above
                     return next.handle(request);
